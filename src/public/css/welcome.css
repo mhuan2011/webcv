@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    /* background: #222; */
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 100px;
+    position: fixed;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.08);
+    z-index: 10000;
+}
+
+.navbar .navbar_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar_list .navbar_item {
+    list-style: none;
+    margin-right: 45px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .navbar_list .navbar_item  a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .navbar_list .navbar_item::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    display: none;
+    transition: 0.6s;
+    animation: animate ease-in-out 0.25s;
+}
+
+@keyframes animate{
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.navbar .navbar_list .navbar_item:hover::before {
+    display: block;
+}
+
+
+.navbar .navbar_list .navbar_item:last-child {
+    margin-right: 0;
+    background-color: #fff;
+    padding: 5px 15px;
+    color: #222;
+    border-radius: 50px;
+}
+
+.navbar .navbar_list .navbar_item:last-child a{
+    color: #222;
+}
+
+.navbar .navbar_list .navbar_item:last-child::before{
+    display: none;
+}
+
+.navbar .navbar_list .navbar_item:last-child:hover {
+    opacity: 0.8;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/background_banner.jpg");
+}
+.banner .content {
+    width: 1200px;
+    height: 450px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 10px 50px 50px rgba(0,0,0,0.3);
+}
+
+.banner .content h2{
+    font-size: 3em;
+    color: #fff;
+}
+
+.banner .content h2 span {
+    color: chartreuse;
+}
+.about_text {
+    font-size: 1.1em;
+    width: 600px;
+    color: rgba(255,255,255,0.9);
+}
+
+.break ul {
+    list-style: none;
+}
+
+.break ul li {
+    width: 50px;
+    height: 3px;
+    background: chartreuse;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.break ul li:first-child {
+    margin-top: 30px;
+    width: 90px;
+}
+
+.break ul li:last-child {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.social_network {
+    margin-top: 25px;
+    width: 40%;
+    
+}
+
+.social_network_list {
+    display: flex;
+    
+}
+.social_network_list li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.8em;
+    margin-right: 25px;
+    transition: 0.5s;
+    animation: ease-in-out 1s;
+    
+}
+
+.social_network_list li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#portfoli {
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    background: #222;
+    width: 400px;
+    height: 100px;
+    margin: 50px 100px;
+    position: relative;
+}
+
+.title .square_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6em;
+    font-weight: 600;
+}
+
+
+
+.title::before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 40px);
+    left: 30%;
+    width: 4px;
+    height: 70vh;
+    background: rgba(0,0,0,0.7);
+}
+.title .square_bottom {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    height: 100px;
+    background: rgba(0,0,0,0.3);
+    z-index: -1;
+}
+
+.time_line {
+    position: absolute;
+    top: calc(100% + 65px);
+    left: 21%;
+
+}
+
+.time_line .time {
+    list-style: none;
+    clip-path: circle(50% at 50% 50%);
+    background-color: rgba(0,0,0,0.8);
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+    position: relative;
+}
+.time_line .text {
+    position: absolute;
+    left: calc(100% + 50px);
+    top: -5px;
+    width: 500px;
+    height: 100px;
+}
+.time_line .text .text-container {
+    margin-bottom: 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.time-item {
+    clip-path: circle(50% at 50% 50%);
+    background-color: #fff;
+    width: 62px;
+    height: 62px;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time_line .time .time-item .years {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.time_line .time .time-item .month {
+    font-size: 0.9em;
+    font-weight: initial;
+}
+
+#blog {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+
+#blog #particles-js {
+    width: 100%;
+    height: 100%;
+    background: url("images/880901.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.blog-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 230px;
+    display: none;
+}
+
+.blog-page .blog-text {
+    width: 300px;
+    background: #fff;
+    padding: 20px 30px;
+    color: #111;
+    border-radius: 5px;
+    
+    
+}
+.blog-page .blog-text .img {
+    width: 100%;
+    height: 160px;
+    background: url("images/YouTube-Vanced-New.jpg");
+    background-size: cover;
+    background-position: center;
+}
